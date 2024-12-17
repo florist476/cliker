@@ -1,0 +1,167 @@
+<MainWindow>:
+
+    FloatLayout: #допомагає розмістити елемент
+        Image:
+            source: '62ed95e4b5e826a8b0960e54b1a11019.jpg'
+        BoxLayout:
+            orientation: "vertical"
+            Label:
+                id:score_lbl
+                text: "Рахунок"
+            FloatLayout:
+                Image:
+                    id: artifact
+                    source: "png-clipart-apple-logo-apple-logo-heart-logo-thumbnail.png"
+                    size_hint: 0.3, 0.3
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                Button:
+                    text: "click"
+                    size_hint: 0.3, 0.3
+                    on_release: root.realize()
+                    background_color: 255/255, 105/255, 180/255, 0.5
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                    on_press: root.click()
+            Button:
+                text: "Магазин"
+                on_press: root.on_shop_screen()
+
+<ShopScreen>:
+    FloatLayout: #допомагає розмістити елемент
+        Image:
+            source: '1427474063_dvorcovyy-most-копия.jpg'
+        BoxLayout:
+            orientation: "vertical"
+            BoxLayout:
+                orientation: "horizontal"
+                size_hint: 1, 0.2
+                Button:
+                    text: "Назад"
+                    size_hint: 0.5, 1
+                    background_color: 1, 0, 0, 0.5
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                    on_press: root.on_main_screen()
+                Label:
+                    text: "Рахунок"
+            ScrollView:
+                size_hint_y: None
+                size_hint: 1, 1
+                GridLayout:
+                    id: shopItems
+                    size_hint_y: None
+                    height: self.minimum_height
+                    cols: 1
+                    row_default_height: 100
+                    FloatLayout:
+                        Button:
+                            background_color: 0, 0, 0, 0.5
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(100, 10)
+
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: 'a1acd0be85fa7b57d53b14e22695ff83.jpg'
+
+                        Label:
+                            text: "+10"
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+
+                        Label:
+                            text: "100"
+                            size_hint: 1, 1
+                            pos_hint: {'x': 0.35, 'center_y':0.5}
+
+
+                    FloatLayout:
+                        Button:
+                            background_color: 0, 0, 0, 0.5
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(100, 10)
+
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: '55840f5ed739a89f21e22693558b777d.jpg'
+
+                        Label:
+                            text: "+20"
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+
+                        Label:
+                            text: "200"
+                            size_hint: 1, 1
+                            pos_hint: {'x': 0.35, 'center_y':0.5}
+
+                    FloatLayout:
+                        Button:
+                            background_color: 0, 0, 0, 0.5
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(100, 10)
+
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: '9a07650ece08115198c5510cbdfe4fbd.jpg'
+
+                        Label:
+                            text: "+30"
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+
+                        Label:
+                            text: "300"
+                            size_hint: 1, 1
+                            pos_hint: {'x': 0.35, 'center_y':0.5}
+
+
+                    FloatLayout:
+                        Button:
+                            background_color: 0, 0, 0, 0.5
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(100, 10)
+
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: '1d85dc13b82bea1f7a2a01affaf6ad15.jpg'
+
+                        Label:
+                            text: "+40"
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+
+                        Label:
+                            text: "400"
+                            size_hint: 1, 1
+                            pos_hint: {'x': 0.35, 'center_y':0.5}
+
+                    FloatLayout:
+                        Button:
+                            background_color: 0, 0, 0, 0.5
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+                            on_press: root.buy(100, 10)
+
+                        Image:
+                            size_hint: 0.1, 1
+                            pos_hint: {'x': 0, 'center_y':0.5}
+                            source: 'e17d483c0ded653fc8d5120482289d66.jpg'
+
+                        Label:
+                            text: "+50"
+                            size_hint: 1, 1
+                            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+
+                        Label:
+                            text: "500"
+                            size_hint: 1, 1
+                            pos_hint: {'x': 0.35, 'center_y':0.5}
+
+
+
